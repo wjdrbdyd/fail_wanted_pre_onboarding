@@ -1,0 +1,264 @@
+.main-section {
+  background-color: #fff;  
+}
+
+.top-banner {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.top-banner .slick-slider {
+  margin-bottom: 0;
+}
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+}
+.slick-track {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: block;
+}
+.slick-track::before, .slick-track::after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.top-banner .slick-slider .slick-slide{
+  position: relative;
+}
+
+.slick-intialized .slick-slide {
+  display: block;
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-active {
+
+} 
+.slick-center {
+}
+.slick-current{
+
+}
+.carousel-img {
+  filter: brightness(50%);
+  
+}
+.carousel-img-active {
+  filter: brightness(100%);
+}
+
+.divider {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: #ececec;
+}
+
+.top-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 120px;
+  width: 30px;
+  height: 60px;
+  opacity: .5;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+}
+.nextArrow {
+  right: calc((100% - 1200px) / 2);
+}
+
+.prevArrow {
+  left: calc((100% - 1210px) / 2);
+}
+
+.arrow-svg {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  flex-shrink: 0;
+  font-size: inherit;
+}
+.top-banner .slick-slider .slick-slide>div {
+  margin: 20px 10px;
+}
+.slick-slider .slick-slide>div>div>div>a>img {
+  display: inline-block;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.carousel-info {
+  text-align: center;
+}
+.carousel-info>h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.carousel-info>h3 {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #666;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.carousel-info-divider {
+  display: none;
+}
+.btn-root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  min-width: 64px;
+  padding: 0 27px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+.btn-medium {
+  height: 40px;
+  font-size: 15px;
+}
+.btn-text {
+  padding: 6px 8px;
+}
+.direct-button {
+  font-size: 14px;
+  font-weight: 700;
+  color: #36f;
+  line-height: 1;
+}
+.label-button {
+  width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  color: inherit;
+}
+.button-endIcon {
+  margin-top: -2px;
+  margin-right: -1px;
+  margin-left: 2px;
+}
+.svg-icon-root {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.svg-dkybi {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  flex-shrink: 0;
+  font-size: inherit;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .carousel-img {
+    height: 183px;
+    border-radius: 3px 3px 0 0;
+  }
+
+}
+
+@media (min-width: 1200px) { 
+  .main-section {
+    padding-top: 25px;
+  }
+  .top-banner .slick-slider .slick-slide {
+    padding: 0 12px;
+    box-sizing: content-box;
+  }
+  .top-banner .slick-slider .slick-slide>div{
+    margin: 0;
+  }
+  .carousel-info {
+    position: absolute;
+    bottom: 28px;
+    width: 330px;
+    height: 146px;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 0;
+    text-align: left;
+    left: 34px;
+  }
+  .carousel-info>h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .carousel-info>h3 {
+    margin: 0 20px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 1.64;
+    color: #333;
+  }
+  .carousel-info-divider {
+    display: block;
+  }
+  .direct-button {
+    margin: 6px 0 0 13px;
+  }
+  .info-active {
+    opacity: 1;
+    animation: info-ani .4s ease-in-out;
+  }
+}
+
+@keyframes info-ani{
+  0%{
+    opacity:0
+  }
+  to{
+    opacity:1
+  }
+}
