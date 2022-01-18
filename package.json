@@ -26,7 +26,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://wjdrbdyd.github.io/wanted_pre_onboarding",
   "browserslist": {
     "production": [
       ">0.2%",
