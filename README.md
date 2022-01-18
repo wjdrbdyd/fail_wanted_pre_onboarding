@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# 원티드 프리온보딩 코스
+## 솔루션 개발자에서 프론트 개발자가 되는 과정. . .  
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
