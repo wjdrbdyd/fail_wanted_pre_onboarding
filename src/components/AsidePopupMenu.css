@@ -1,0 +1,227 @@
+.menu-container {
+  position: absolute;
+  top: 100%;
+  right: -27px;
+  margin-top: 13px;
+  padding: 0!important;
+  display: block;
+  transform: translate(50%,8px);
+}
+.menu-wrapper {
+  overflow: hidden;
+  min-width: 194px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px 0 rgb(0 0 0 / 30%);
+  border: 1px solid #cdcdcd;
+  background-color: #fff;
+}
+.menu-header {
+  height: 50px;
+  width: 100%;
+  display: none;
+}
+.menu-header i {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  margin: 13px 0;
+}
+.icon-wanted-symbol .path1:before {
+  content: "\e98a";
+  color: rgb(36, 224, 166);
+}
+.icon-wanted-symbol .path2:before {
+  content: "\e98c";
+  margin-left: -2.470703125em;
+  color: rgb(67, 139, 255);
+}
+.icon-wanted-symbol .path3:before {
+  content: "\e98d";
+  margin-left: -2.470703125em;
+  color: rgb(44, 91, 242);
+}
+.icon-wanted-symbol .path4:before {
+  content: "\e98d";
+  margin-left: -2.470703125em;
+  color: rgb(44, 91, 242);
+}
+.icon-wanted-symbol .path5:before {
+  content: "\e994";
+  margin-left: -2.470703125em;
+  color: rgb(67, 139, 255);
+}
+.icon-wanted-symbol .path6:before {
+  content: "\e995";
+  margin-left: -2.470703125em;
+  color: rgb(58, 104, 249);
+}
+.icon-wanted-symbol .path7:before {
+  content: "\e997";
+  margin-left: -2.470703125em;
+  color: rgb(44, 91, 242);
+}
+.icon-wanted-symbol .path8:before {
+  content: "\e9b8";
+  margin-left: -2.470703125em;
+  color: rgb(0, 73, 219);
+}
+.menu-header button {
+  float: right;
+  color: #999;
+  box-sizing: border-box;
+}
+.menu-header button svg{
+  font-size: 16px;
+  line-height: 1;
+  margin: 12px 0;
+}
+.menuPop-desktop {
+  padding-top: 14px;
+}
+.menuPop-desktop li{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.menuPop-desktop li{
+  height: 34px!important;
+}
+.menuPop-desktop li a {
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 500;
+  color: #111;
+  position: relative;
+  font-size: 14px;
+  height: 34px;
+  font-weight: 500!important;
+  line-height: normal!important;
+  padding: 8px!important;
+}
+.menuPop-desktop li:nth-child(2):after, .menuPop-desktop li:nth-child(6):after {
+  content: "";
+  display: block;
+  margin: 9px 7px;
+  height: 1px;
+  background-color: #ececec;
+}
+.menuPop-desktop li:nth-child(3), .menuPop-desktop li:nth-child(7) {
+  margin-top: 18px;
+}
+.menuPop-desktop li:last-child {
+  border: 0;
+  margin-top: 9px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  height: 50px!important;
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid #ececec;
+}
+.menuPop-desktop li a.is-logout {
+  height: 50px;
+  color: #333;
+}
+.menuPop-mobile {
+  margin: 45px 0 15px;
+}
+.menuPop-list li {
+  width: 100%;
+  height: auto;
+}
+.menuPop-list li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.menuPop-mobile li a {
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+.menuPop-mobile li a .profilePic{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ddd;
+}
+
+.menuPop-divider {
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+}
+.bubble-point {
+  position: absolute;
+  right: 50%;
+  bottom: 100%;
+  height: 11px;
+  overflow: hidden;
+  margin-bottom: -1px;
+  transform: translateX(-47px);
+}
+.bubble-point:after {
+  content: "";
+  margin-top: 4px;
+  border: 1px solid #cdcdcd;
+  background-color: #fff;
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-top-right-radius: 30%;
+  transform: rotate(-55deg) skewX(-20deg);
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    transform: none;
+  }
+  .menu-wrapper {
+    box-shadow: none;
+    border: 1px solid #e1e2e3;
+    border-radius: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  .menu-header {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .menuPop-desktop {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .menuPop-mobile {
+    display: none;
+  }
+  
+} 
+@media (min-width: 1200px){
+  .menuPop-mobile {
+    display: none;
+  }
+} 
