@@ -6,8 +6,8 @@ import {ReactComponent as Dkybi} from '../assets/icons/icondkybi.svg';
 import Slide from './Slide';
 import { useSelector } from 'react-redux';
 
-
 const MainSection = () => {
+  
   const slideRef = useRef(null);
   let [slideWidth, setSlideWidth]= useState(1084);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -125,60 +125,91 @@ const MainSection = () => {
       }
     }
   }
-
-  const [startX, setStartX] = useState();
-  const [isScroll, setIsScroll] = useState(false);
-  const handleScroll = (e, scroll) => {
-
-    if(scroll === 'start'){
-      e.preventDefault();
-      setIsScroll(true);
-      setStartX(e.pageX + slideRef.current.scrollLeft);
-    } else if(scroll === 'end'){
-      setIsScroll(false);
-    } else if(scroll === 'leave'){
-      setIsScroll(false);
-    }
+  /* 드래그 슬라이더 구현하려다 안되서 주석.. */
+  // const swipeStart = e => {
+  //   console.log(this.props.verticalSwiping)
+  //   if (this.props.verticalSwiping) {
+  //     this.disableBodyScroll();
+  //   }
     
-  };
-  const throttle = (func, ms) => {
-    let throttled = false;
-    return (...args) => {
-      if (!throttled) {
-        throttled = true;
-        setTimeout(() => {
-          func(...args);
-          throttled = false;
-        }, ms);
-      }
-    };
-  };
-  const handleSlide = (e) => {
-    if(isScroll){
-      const {scrollWidth, clientWidth, scrollLeft} = slideRef.current;
-      console.log(`move e.pageX : ${e.pageX} , slideRef.current.scrollLeft: ${slideRef.current.scrollLeft}`)
-      slideRef.current.scrollLeft = startX - e.pageX;
-      console.log(`scrollWidth:${scrollWidth}, clientWidth:${clientWidth}, scrollLeft:${scrollLeft}`);
-      slideRef.current.style.transition = "-webkit-transform 500ms ease 0s";
-      slideRef.current.style.transform = `translate3d(${-(50 + TOTAL_SLIDES * slideWidth - ((windowSize.width - slideWidth) / 2)) - ( (currentSlide + 1) * slideWidth)}px, 0, 0)`;
-      if(scrollLeft === 0){
-        setStartX(e.pageX);
-      } else if (scrollWidth <= clientWidth + scrollLeft) {
-        setStartX(e.pageX + scrollLeft)
-      }
-    }
-  }
-  const onThrottleDragMove = throttle(handleSlide, 100);
-
+  //   let state = swipeStart(e, this.props.swipe, this.props.draggable);
+  //   console.log(state)
+  //   state !== "" && this.setState(state);
+  // };
+  // const swipeMove = e => {
+  //   let state = swipeMove(e, {
+  //     ...this.props,
+  //     ...this.state,
+  //     trackRef: this.track,
+  //     listRef: this.list,
+  //     slideIndex: this.state.currentSlide
+  //   });
+  //   if (!state) return;
+  //   if (state["swiping"]) {
+  //     this.clickable = false;
+  //   }
+  //   this.setState(state);
+  // };
+  // const swipeEnd = e => {
+  //   let state = swipeEnd(e, {
+  //     ...this.props,
+  //     ...this.state,
+  //     trackRef: this.track,
+  //     listRef: this.list,
+  //     slideIndex: this.state.currentSlide
+  //   });
+  //   if (!state) return;
+  //   let triggerSlideHandler = state["triggerSlideHandler"];
+  //   delete state["triggerSlideHandler"];
+  //   this.setState(state);
+  //   if (triggerSlideHandler === undefined) return;
+  //   this.slideHandler(triggerSlideHandler);
+  //   if (this.props.verticalSwiping) {
+  //     this.enableBodyScroll();
+  //   }
+  // };
+  // const touchEnd = e => {
+  //   this.swipeEnd(e);
+  //   this.clickable = true;
+  // };
+  // const changeSlide = (options, dontAnimate = false) => {
+  //   const spec = { ...this.props, ...this.state };
+  //   let targetSlide = changeSlide(spec, options);
+  //   if (targetSlide !== 0 && !targetSlide) return;
+  //   if (dontAnimate === true) {
+  //     this.slideHandler(targetSlide, dontAnimate);
+  //   } else {
+  //     this.slideHandler(targetSlide);
+  //   }
+  //   this.props.autoplay && this.autoPlay("update");
+  //   if (this.props.focusOnSelect) {
+  //     const nodes = this.list.querySelectorAll(".slick-current");
+  //     nodes[0] && nodes[0].focus();
+  //   }
+  // };
+  // const keyHandler = e => {
+  //   let dir = keyHandler(e, this.props.accessibility, this.props.rtl);
+  //   dir !== "" && changeSlide({ message: dir });
+  // };
+  // let listProps = {
+  //   onMouseDown: swipeStart ,
+  //   onMouseMove: swipeMove ,
+  //   onMouseUp: swipeEnd ,
+  //   onMouseLeave: swipeEnd,
+  //   onTouchStart:  swipeStart ,
+  //   onTouchMove: swipeMove,
+  //   onTouchEnd: touchEnd ,
+  //   onTouchCancel: swipeEnd ,
+  //   onKeyDown: keyHandler 
+  // };
+  
   return (
     <div>
       <main className='main-section'>
         <div className='top-banner'>
           <div className='slick-slider slick-intialized'>
             <div className='slick-list' style={{padding: '0px 50px'}}> 
-              <div onMouseDown={(e) => handleScroll(e, 'start') } onMouseMove={isScroll ? onThrottleDragMove : null} onMouseEnter={(e) => handleScroll(e, 'end')}
-                      onMouseLeave={(e) => handleScroll(e, 'leave')}  
-                        className='slick-track' ref={slideRef} style={slideStyle} >
+              <div className='slick-track' ref={slideRef} style={slideStyle} >
                 { slideCloneData &&
                   (slideCloneData.map((slide, idx) => {
                     let cloneIdx = -(slideCloneData.length-idx);

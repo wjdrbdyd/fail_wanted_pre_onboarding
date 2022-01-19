@@ -34,37 +34,7 @@ function App() {
       <div className="padding-line"></div>
       <MainSection />
       { overlayView && <Overlay /> }
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
-      <p>ddd</p>
+      <div style={{height: "1000px"}}></div>
     </div>
   );
 }
